@@ -1,1 +1,11 @@
 @import "../header/header";
+.bg-circle {
+	top: 5%;
+	left: 9%;
+	position: absolute;
+	background-image: url("../../assets/shared/desktop/bg-pattern-circle.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	transform: translate(-25%, -62%);
+}
