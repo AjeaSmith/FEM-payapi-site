@@ -1,76 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Frontend Mentor | PayAPI Website Challenge</title>
-    <link rel="stylesheet" href="/styles/index.min.css">
-  </head>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
 
-  <body>
-    <header>
-      <div class="wrapper">
-        <img src="./assets/shared/desktop/logo.svg" alt="payapi" width="135" height="38"/>
-        <nav>
-          <ul>
-            <li>Pricing</li>
-            <li>About</li>
-            <li>Contact</li>
-          </ul>
-          <a href="#" class="menu-toggle" onclick="toggleMenu()">
-            <img src="./assets/shared/mobile/menu.svg" alt="">
-          </a>
-        </nav>
-        <button>
-          Schedule a Demo
-        </button>
+  <title>Frontend Mentor | PayAPI Website Challenge</title>
+  <link rel="stylesheet" href="/styles/index.min.css">
+  <!-- <script type="text/javascript" src="./js/mobile_nav.js" defer></script> -->
+</head>
 
-      </div>
-    </header>
+<body>
+  <header class="wrapper">
+    <img class="bg-circle" src="./assets/shared/desktop/bg-pattern-circle.svg" alt="gray circle" />
 
-    Start building with our APIs for absolutely free.
-    Enter email address 
-    Schedule a Demo
-    Have any questions? Contact Us
+    <img src="./assets/shared/desktop/logo.svg" alt="" />
 
-    Who we work with
-    Today, millions of people around the world have successfully connected 
-    their accounts to apps they love using our API. We provide developers 
-    with the tools they need to create easy and accessible experiences 
-    for their users.
-    About Us
+    <button class="mobile-nav-toggle" aria-controls="menu" aria-expanded="false">
+      <span class="sr-only">Menu</span>
+    </button>
+    <nav>
+      <ul role="list" data-visible="false" id="menu">
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li>
+          <button>
+            Schedule a Demo
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-    Easy to implement
-    Our API comes with just a few lines of code. You’ll be up and running in 
-    no time. We built our documentation page to integrate payments functionality 
-    with ease.
+  <!-- Start building with our APIs for absolutely free.
+  Enter email address
+  Schedule a Demo
+  Have any questions? Contact Us
 
-    Simple UI & UX
-    Our pre-built form is easy to integrate in your app or website’s checkout 
-    flow and designed to optimize conversion.
+  Who we work with
+  Today, millions of people around the world have successfully connected
+  their accounts to apps they love using our API. We provide developers
+  with the tools they need to create easy and accessible experiences
+  for their users.
+  About Us
 
-    Personal Finances
-    Consolidate financial data from multiple sources and categorize transactions up to
-    2 years of history. Analyze reports to reconcile activities in your account.
+  Easy to implement
+  Our API comes with just a few lines of code. You’ll be up and running in
+  no time. We built our documentation page to integrate payments functionality
+  with ease.
 
-    Banking & Coverage
-    With our platform, you can speed up account onboarding and support ongoing payments 
-    for checking, savings, credit card, and brokerage accounts.
+  Simple UI & UX
+  Our pre-built form is easy to integrate in your app or website’s checkout
+  flow and designed to optimize conversion.
 
-    Consumer Payments
-    It’s easier to set up secure bank payments with us through a flow designed with the 
-    user experience in mind. Customers could instantly authenticate their account.
+  Personal Finances
+  Consolidate financial data from multiple sources and categorize transactions up to
+  2 years of history. Analyze reports to reconcile activities in your account.
 
-    Ready to start? 
-    Enter email address 
-    Schedule a Demo
+  Banking & Coverage
+  With our platform, you can speed up account onboarding and support ongoing payments
+  for checking, savings, credit card, and brokerage accounts.
 
-    Pricing
-    About
-    Contact
-  </body>
+  Consumer Payments
+  It’s easier to set up secure bank payments with us through a flow designed with the
+  user experience in mind. Customers could instantly authenticate their account.
+
+  Ready to start?
+  Enter email address
+  Schedule a Demo
+
+  Pricing
+  About
+  Contact -->
+  <script>
+    const navigation = document.querySelector("#menu");
+    const navToggle = document.querySelector(".mobile-nav-toggle");
+
+    navToggle.addEventListener("click", () => {
+      const visibility = navigation.getAttribute("data-visible");
+
+      if (visibility === "false") {
+        navigation.setAttribute("data-visible", true);
+        navToggle.setAttribute("aria-expanded", true);
+      } else if (visibility === "true") {
+        navigation.setAttribute("data-visible", false);
+        navToggle.setAttribute("aria-expanded", false);
+      }
+    });
+  </script>
+</body>
 
 </html>

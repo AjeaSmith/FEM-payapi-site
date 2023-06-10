@@ -1,17 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Frontend Mentor | PayAPI Website Challenge</title>
-    <link rel="stylesheet" href="styles/contact.min.css">
-  </head>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
 
-  <body>
-    Pricing
+  <title>Frontend Mentor | PayAPI Website Challenge</title>
+  <link rel="stylesheet" href="styles/contact.min.css">
+  <style>
+    .sr-only:not(:focus):not(:active) {
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+
+    header nav {
+      display: flex;
+      align-items: center;
+    }
+
+    header nav ul {
+      display: flex;
+      list-style: none;
+      align-items: center;
+    }
+
+    header nav ul li {
+      margin-left: 2.5625rem;
+    }
+
+    header nav ul li a {
+      color: var(--text1);
+      text-decoration: none;
+    }
+
+    header nav ul li a:hover {
+      color: var(--clr-red);
+    }
+
+    .mobile-nav-toggle {
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      header nav ul {
+        margin: 0;
+        z-index: 2;
+        padding: min(30vh, 10rem) 2em;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 30%;
+        background: var(--bg-blue-200);
+
+        transform: translateX(100%);
+      }
+
+      header nav ul[data-visible="true"] {
+        transition: transform 350ms ease-out;
+        transform: translateX(0%);
+      }
+
+      header nav ul li {
+        margin-bottom: 24px;
+      }
+
+      header nav ul li a {
+        font-size: 18px;
+        color: var(--text1);
+      }
+
+      .mobile-nav-toggle {
+        display: block;
+        background-color: transparent;
+        background-image: url("./assets/shared/mobile/menu.svg");
+        background-repeat: no-repeat;
+        border: 0;
+        z-index: 9999;
+        position: absolute;
+        width: 2rem;
+        top: 3.8rem;
+        right: 2rem;
+        aspect-ratio: 1;
+      }
+
+      .mobile-nav-toggle[aria-expanded="true"] {
+        background-image: url("./assets/shared/mobile/close.svg");
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="wrapper">
+    <img src="./assets/shared/desktop/logo.svg" alt="" />
+
+    <button class="mobile-nav-toggle" aria-controls="menu" aria-expanded="false">
+      <span class="sr-only">Menu</span>
+    </button>
+    <nav>
+      <ul role="list" data-visible="false" id="menu">
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li>
+          <button>
+            Schedule a Demo
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <script>
+    const navigation = document.querySelector("#menu");
+    const navToggle = document.querySelector(".mobile-nav-toggle");
+
+    navToggle.addEventListener("click", () => {
+      const visibility = navigation.getAttribute("data-visible");
+
+      if (visibility === "false") {
+        navigation.setAttribute("data-visible", true);
+        navToggle.setAttribute("aria-expanded", true);
+      } else if (visibility === "true") {
+        navigation.setAttribute("data-visible", false);
+        navToggle.setAttribute("aria-expanded", false);
+      }
+    });
+  </script>
+  <!-- Pricing
     About
     Contact
     Schedule a Demo
@@ -34,7 +157,7 @@
 
     Pricing
     About
-    Contact
-  </body>
+    Contact -->
+</body>
 
 </html>

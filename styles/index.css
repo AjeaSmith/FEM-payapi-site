@@ -1,25 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Public+Sans:wght@100;400&display=swap");
-.header {
-  background-color: blue;
-  height: 80px;
-  font-size: 12px;
-}
-
 :root {
   --bg-pink-100: hsl(337, 60%, 64%);
   --bg-pink-200: hsl(337, 48%, 49%);
-  --bg-body: #EDF3F8;
+  --bg-body: #edf3f8;
   --bg-blue-100: hsl(207, 16%, 50%);
   --bg-blue-200: hsl(207, 27%, 15%);
   --text1: hsl(220, 60%, 99%);
   --text2: hsl(207, 33%, 32%);
-  --fs-body: 0.9375rem;
+  --fs-body: 0.93rem;
   --fs-72: 4.5rem;
   --fs-56: 3.5rem;
   --fs-48: 3rem;
   --fs-32: 2rem;
   --fs-25: 1.6rem;
   --fs-24: 1.5rem;
+  --fs-20: 1.25rem;
   --container: 69.375rem;
 }
 
@@ -28,7 +23,9 @@ html {
   font-size: 100%;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -51,5 +48,85 @@ body {
 @media (min-width: 37.5em) {
   .wrapper {
     width: calc(100% - 4.87rem);
+  }
+}
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+header .mobile-nav-toggle {
+  display: none;
+}
+header .bg-circle {
+  top: 50%;
+  left: 0;
+  position: absolute;
+  background-image: url("../../assets/shared/desktop/bg-pattern-circle.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transform: translate(-25%, -62%);
+}
+header .sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+header nav ul li a {
+  font-size: var(--fs-20);
+  font-weight: bold;
+  color: var(--text2);
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  header nav ul {
+    margin: 0;
+    z-index: 2;
+    padding: min(30vh, 10rem) 2em;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 30%;
+    background: var(--bg-blue-200);
+    transform: translateX(100%);
+  }
+  header nav ul[data-visible=true] {
+    transition: transform 350ms ease-out;
+    transform: translateX(0%);
+  }
+  header nav ul[data-visible=true] li {
+    margin-bottom: 24px;
+  }
+  header nav ul[data-visible=true] li a {
+    color: var(--text1);
+    font-size: var(--fs-body);
+  }
+  header .mobile-nav-toggle {
+    display: block;
+    background-color: transparent;
+    background-image: url("../../assets/shared/mobile/menu.svg");
+    background-repeat: no-repeat;
+    border: 0;
+    z-index: 9999;
+    position: absolute;
+    width: 2rem;
+    top: 3.2rem;
+    right: 0;
+    aspect-ratio: 1;
+  }
+  header .mobile-nav-toggle[aria-expanded=true] {
+    background-image: url("../../assets/shared/mobile/close.svg");
   }
 }/*# sourceMappingURL=index.css.map */
