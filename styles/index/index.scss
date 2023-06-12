@@ -1,11 +1,25 @@
 @import "../header/header";
 .bg-circle {
-	top: 5%;
-	left: 9%;
 	position: absolute;
 	background-image: url("../../assets/shared/desktop/bg-pattern-circle.svg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center;
-	transform: translate(-25%, -62%);
+	background-position: center center;
+	transform: translate(-20%, -55%);
+}
+
+@media (min-width: 767px) {
+	.bg-circle {
+		width: 120vw;
+		transform: translate(-8%, -65%);
+	}
+}
+
+@media (min-width: 1440px) {
+	.bg-circle {
+		width: auto;
+		transform: translate(-8%, -2%);
+		right: -8%;
+		top: -10%;
+	}
 }
