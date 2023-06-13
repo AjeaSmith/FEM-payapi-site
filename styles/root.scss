@@ -23,7 +23,6 @@
 }
 
 html {
-	box-sizing: border-box;
 	font-size: 100%;
 }
 
@@ -32,8 +31,15 @@ html {
 *::after {
 	box-sizing: inherit;
 }
+h1,
+h2,
+h3,
+h4 {
+	font-family: "DM Serif Display", serif;
+}
 
 body {
+	box-sizing: border-box;
 	margin: 0;
 	background-color: var(--bg-body);
 	background-image: url("../assets/shared/desktop/bg-pattern-circle.svg");
@@ -45,8 +51,6 @@ body {
 }
 
 .wrapper {
-	position: relative;
-	overflow-x: hidden;
 	padding-top: 2.5rem;
 	width: calc(100% - 3rem);
 	max-width: var(--container);

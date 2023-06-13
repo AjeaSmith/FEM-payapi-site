@@ -29,10 +29,19 @@ html {
   box-sizing: inherit;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: "DM Serif Display", serif;
+}
+
 body {
-  overflow: hidden;
   margin: 0;
   background-color: var(--bg-body);
+  background-image: url("../assets/shared/desktop/bg-pattern-circle.svg");
+  background-repeat: no-repeat;
+  background-position: center -500px;
   font-size: var(--fs-body);
   line-height: 28px;
   font-family: "Public Sans", sans-serif;
@@ -45,9 +54,19 @@ body {
   margin-inline: auto;
 }
 
-@media (min-width: 37.5em) {
+@media (min-width: 768px) {
+  body {
+    background-size: 1100px 1100px;
+    background-position: center 110%;
+  }
   .wrapper {
     width: calc(100% - 4.87rem);
+  }
+}
+@media (min-width: 1440px) {
+  body {
+    background-size: 780px 780px;
+    background-position: 1025px 41%;
   }
 }
 header {
@@ -101,7 +120,7 @@ header .mobile-nav-toggle {
   z-index: 9999;
   position: absolute;
   width: 2rem;
-  top: 3.2rem;
+  top: 0.7rem;
   right: 0;
   aspect-ratio: 1;
 }
