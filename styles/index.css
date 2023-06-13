@@ -196,10 +196,10 @@ header .sr-only:not(:focus):not(:active) {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.hero__container .hero__text {
+.hero__container .hero__content {
   text-align: center;
 }
-.hero__container .hero__text h1 {
+.hero__container .hero__content h1 {
   margin-top: 0;
   color: var(--text2);
   max-width: 20ch;
@@ -207,4 +207,31 @@ header .sr-only:not(:focus):not(:active) {
   font-weight: 400;
   font-size: clamp(2rem, 3.756vw + 1.12rem, 4.5rem);
   line-height: 36px;
+}
+.hero__container .hero__content form {
+  display: flex;
+  flex-direction: column;
+}
+.hero__container .hero__content form input {
+  margin-bottom: 1rem;
+}
+.hero__container .hero__content form input::-moz-placeholder {
+  font-weight: bold;
+}
+.hero__container .hero__content form input::placeholder {
+  font-weight: bold;
+}
+.hero__container .hero__content form input,
+.hero__container .hero__content form button {
+  padding: 16px 27px;
+  border: none;
+  border-radius: 50px;
+}
+.hero__container .hero__content form button {
+  font-weight: bold;
+  color: var(--text1);
+  background-color: var(--bg-pink-200);
+}
+.hero__container .hero__content form p {
+  color: var(--text2);
 }/*# sourceMappingURL=index.css.map */
