@@ -190,7 +190,8 @@ header .sr-only:not(:focus):not(:active) {
 }
 .hero__container .hero__img {
   width: 60%;
-  height: 325px;
+  max-width: 230px;
+  height: 335px;
   background-image: url("../../assets/home/desktop/illustration-phone-mockup.svg");
   background-size: cover;
   background-repeat: no-repeat;
