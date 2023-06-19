@@ -57,7 +57,7 @@ body {
 @media (min-width: 768px) {
   body {
     background-size: 1100px 1100px;
-    background-position: center 110%;
+    background-position: center -700px;
   }
   .wrapper {
     width: calc(100% - 4.87rem);
@@ -65,7 +65,7 @@ body {
 }
 @media (min-width: 1440px) {
   body {
-    background-size: 780px 780px;
-    background-position: 1025px 41%;
+    background-size: 900px 900px;
+    background-position: 890px -237px;
   }
 }/*# sourceMappingURL=root.css.map */

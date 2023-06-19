@@ -7,17 +7,14 @@
 	align-items: center;
 }
 .hero__container {
+	margin-bottom: 30px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 
 	.hero__img {
-		width: 60%;
-		max-width: 230px;
-		height: 335px;
-		background-image: url("../../assets/home/desktop/illustration-phone-mockup.svg");
-		background-size: cover;
-		background-repeat: no-repeat;
+		width: 55%;
+		max-width: 80%;
 	}
 
 	.hero__content {
@@ -28,7 +25,11 @@
 			max-width: 20ch;
 			letter-spacing: -0.25px;
 			font-weight: 400;
-			font-size: clamp(2rem, 3.756vw + 1.12rem, 4.5rem);
+			font-size: clamp(
+				32px,
+				calc(2rem + ((1vw - 3.75px) * 3.7559)),
+				72px
+			);
 			line-height: 36px;
 		}
 
@@ -36,32 +37,97 @@
 			display: flex;
 			flex-direction: column;
 
-			input {
-				margin-bottom: 1rem;
-				&::placeholder {
+			.input-group {
+				input {
+					margin-bottom: 1rem;
+					&::placeholder {
+						font-weight: bold;
+					}
+				}
+				input,
+				button {
+					padding: 16px 27px;
+					border: none;
+					border-radius: 50px;
+				}
+				button {
 					font-weight: bold;
+					color: var(--text1);
+					background-color: var(--bg-pink-200);
 				}
 			}
-			input,
-			button {
-				padding: 16px 27px;
-				border: none;
-				border-radius: 50px;
-			}
-			button {
-				font-weight: bold;
-				color: var(--text1);
-				background-color: var(--bg-pink-200);
-			}
+
 			p {
 				color: var(--text2);
 			}
 		}
 	}
-}
 
-@media (min-width: 767px) {
-}
+	// ------- MEDIA QUERIES ------------
+	// 768
+	@media (min-width: 767px) {
+		.hero__img {
+			width: 43%;
+		}
 
-@media (min-width: 1440px) {
+		.hero__content {
+			h1 {
+				max-width: 21ch;
+				line-height: 56px;
+			}
+			form {
+				display: inline-flex;
+				.input-group {
+					position: relative;
+					display: inline-block;
+
+					input,
+					button {
+						border: none;
+						border-radius: 50px;
+					}
+
+					input {
+						padding-right: 16rem; /* Adjust the padding as per your preference */
+					}
+
+					button {
+						position: absolute;
+						top: 0;
+						right: 0;
+					}
+				}
+				p {
+					margin: 0;
+					span {
+						font-weight: bold;
+					}
+				}
+			}
+		}
+	}
+
+	// 1440
+	@media (min-width: 1440px) {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		.hero__img {
+			width: 40%;
+			order: 2;
+		}
+		.hero__content {
+			text-align: left;
+			h1 {
+				max-width: 15ch;
+				line-height: 72px;
+			}
+
+			form {
+				p {
+					margin-left: 25px;
+				}
+			}
+		}
+	}
 }
