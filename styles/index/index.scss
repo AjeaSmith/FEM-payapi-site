@@ -6,6 +6,8 @@
 	justify-content: space-between;
 	align-items: center;
 }
+
+// ---------- HERO SECTION ----------
 .hero__container {
 	margin-bottom: 30px;
 	display: flex;
@@ -130,4 +132,10 @@
 			}
 		}
 	}
+}
+
+// ---------- WORK SECTION ----------
+
+.companies {
+	padding: 5rem 0;
 }

@@ -287,4 +287,8 @@ header .sr-only:not(:focus):not(:active) {
   .hero__container .hero__content form p {
     margin-left: 25px;
   }
+}
+
+.companies {
+  padding: 5rem 0;
 }/*# sourceMappingURL=index.css.map */
