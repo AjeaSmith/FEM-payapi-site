@@ -147,7 +147,7 @@
 	background-position: center -480px;
 	color: var(--text1);
 	margin: 5rem 0;
-	padding: 2.5rem 0 5rem 0;
+	padding: 5rem 0;
 
 	.companies__container {
 		.companies__images {
@@ -186,6 +186,54 @@
 			}
 		}
 	}
+
+	@media (min-width: 768px) {
+		background-size: cover;
+		background-position: center -675px;
+
+		padding: 5.5rem 0;
+
+		.companies__container {
+			.companies__images {
+				grid-template-columns: repeat(3, 1fr);
+				margin-bottom: 4rem;
+			}
+			.companies__content {
+				max-width: 50ch;
+				margin-inline: auto;
+			}
+		}
+	}
+	@media (min-width: 1440px) {
+		background-size: 900px;
+		background-position: -214px -498px;
+
+		padding: 6.25rem 0;
+
+		.companies__container {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+
+			.companies__images {
+				grid-column: 2;
+				margin-bottom: 0;
+				align-items: center;
+				row-gap: 0;
+			}
+			.companies__content {
+				text-align: left;
+				grid-row: 1;
+				margin-inline: 0;
+
+				h2 {
+					margin: 0;
+				}
+				p {
+					margin: 2.5rem 0 2rem 0;
+				}
+			}
+		}
+	}
 }
 
-// ---------- CODE ----------------
+// ---------- CODE SECTION ----------------
