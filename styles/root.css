@@ -4,8 +4,8 @@
   --bg-pink-200: hsl(337, 48%, 49%);
   --bg-body: #edf3f8;
   --bg-blue-100: hsl(207, 16%, 50%);
-  --bg-blue-200: hsl(209, 27%, 15%, 0.95);
-  --text1: hsl(220, 60%, 99%);
+  --bg-blue-200: #1b262f;
+  --text1: #fbfcfe;
   --text2: hsl(207, 33%, 32%);
   --fs-body: 0.938rem;
   --fs-72: 4.5rem;

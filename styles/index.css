@@ -4,8 +4,8 @@
   --bg-pink-200: hsl(337, 48%, 49%);
   --bg-body: #edf3f8;
   --bg-blue-100: hsl(207, 16%, 50%);
-  --bg-blue-200: hsl(209, 27%, 15%, 0.95);
-  --text1: hsl(220, 60%, 99%);
+  --bg-blue-200: #1b262f;
+  --text1: #fbfcfe;
   --text2: hsl(207, 33%, 32%);
   --fs-body: 0.938rem;
   --fs-72: 4.5rem;
@@ -183,20 +183,19 @@ header .sr-only:not(:focus):not(:active) {
   align-items: center;
 }
 
-.hero__container {
-  margin-bottom: 30px;
+.hero .hero__container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.hero__container .hero__img {
+.hero .hero__container .hero__img {
   width: 55%;
   max-width: 80%;
 }
-.hero__container .hero__content {
+.hero .hero__container .hero__content {
   text-align: center;
 }
-.hero__container .hero__content h1 {
+.hero .hero__container .hero__content h1 {
   margin-top: 0;
   color: var(--text2);
   max-width: 20ch;
@@ -205,90 +204,130 @@ header .sr-only:not(:focus):not(:active) {
   font-size: clamp(32px, 2rem + (1vw - 3.75px) * 3.7559, 72px);
   line-height: 36px;
 }
-.hero__container .hero__content form {
+.hero .hero__container .hero__content form {
   display: flex;
   flex-direction: column;
 }
-.hero__container .hero__content form .input-group input {
+.hero .hero__container .hero__content form .input-group {
+  display: flex;
+  flex-direction: column;
+}
+.hero .hero__container .hero__content form .input-group input {
   margin-bottom: 1rem;
 }
-.hero__container .hero__content form .input-group input::-moz-placeholder {
+.hero .hero__container .hero__content form .input-group input::-moz-placeholder {
   font-weight: bold;
 }
-.hero__container .hero__content form .input-group input::placeholder {
+.hero .hero__container .hero__content form .input-group input::placeholder {
   font-weight: bold;
 }
-.hero__container .hero__content form .input-group input,
-.hero__container .hero__content form .input-group button {
+.hero .hero__container .hero__content form .input-group input,
+.hero .hero__container .hero__content form .input-group button {
   padding: 16px 27px;
   border: none;
   border-radius: 50px;
 }
-.hero__container .hero__content form .input-group button {
+.hero .hero__container .hero__content form .input-group button {
   font-weight: bold;
   color: var(--text1);
   background-color: var(--bg-pink-200);
 }
-.hero__container .hero__content form p {
+.hero .hero__container .hero__content form p {
   color: var(--text2);
 }
 @media (min-width: 767px) {
-  .hero__container .hero__img {
+  .hero .hero__container .hero__img {
     width: 43%;
   }
-  .hero__container .hero__content h1 {
+  .hero .hero__container .hero__content h1 {
     max-width: 21ch;
     line-height: 56px;
   }
-  .hero__container .hero__content form {
+  .hero .hero__container .hero__content form {
     display: inline-flex;
   }
-  .hero__container .hero__content form .input-group {
+  .hero .hero__container .hero__content form .input-group {
     position: relative;
     display: inline-block;
   }
-  .hero__container .hero__content form .input-group input,
-  .hero__container .hero__content form .input-group button {
+  .hero .hero__container .hero__content form .input-group input,
+  .hero .hero__container .hero__content form .input-group button {
     border: none;
     border-radius: 50px;
   }
-  .hero__container .hero__content form .input-group input {
+  .hero .hero__container .hero__content form .input-group input {
     padding-right: 16rem; /* Adjust the padding as per your preference */
   }
-  .hero__container .hero__content form .input-group button {
+  .hero .hero__container .hero__content form .input-group button {
     position: absolute;
     top: 0;
     right: 0;
   }
-  .hero__container .hero__content form p {
+  .hero .hero__container .hero__content form p {
     margin: 0;
   }
-  .hero__container .hero__content form p span {
+  .hero .hero__container .hero__content form p span {
     font-weight: bold;
   }
 }
 @media (min-width: 1440px) {
-  .hero__container {
+  .hero .hero__container {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
-  .hero__container .hero__img {
+  .hero .hero__container .hero__img {
     width: 40%;
     order: 2;
   }
-  .hero__container .hero__content {
+  .hero .hero__container .hero__content {
     text-align: left;
   }
-  .hero__container .hero__content h1 {
+  .hero .hero__container .hero__content h1 {
     max-width: 15ch;
     line-height: 72px;
   }
-  .hero__container .hero__content form p {
+  .hero .hero__container .hero__content form p {
     margin-left: 25px;
   }
 }
 
 .companies {
-  padding: 5rem 0;
+  background: var(--bg-blue-200);
+  background-image: url("/assets/shared/desktop/bg-pattern-circle.svg");
+  background-repeat: no-repeat;
+  background-size: 700px 700px;
+  background-position: center -480px;
+  color: var(--text1);
+  margin: 5rem 0;
+  padding: 2.5rem 0 5rem 0;
+}
+.companies .companies__container .companies__images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  row-gap: 40px;
+}
+.companies .companies__container .companies__content {
+  text-align: center;
+}
+.companies .companies__container .companies__content h2 {
+  margin-top: 3.5rem;
+  font-weight: normal;
+  font-size: clamp(32px, 2rem + (1vw - 3.75px) * 1.5023, 48px);
+}
+.companies .companies__container .companies__content p {
+  margin: 1rem 0 2rem 0;
+  line-height: 28px;
+  color: var(--text1);
+  opacity: 0.6;
+}
+.companies .companies__container .companies__content button {
+  font-weight: bold;
+  color: var(--text1);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  background-color: transparent;
+  border: 1px solid var(--text1);
+  outline: none;
 }/*# sourceMappingURL=index.css.map */
