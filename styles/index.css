@@ -189,6 +189,7 @@ header .sr-only:not(:focus):not(:active) {
   align-items: center;
 }
 .hero .hero__container .hero__img {
+  margin-left: 1.5rem;
   width: 55%;
   max-width: 80%;
 }
@@ -372,5 +373,54 @@ header .sr-only:not(:focus):not(:active) {
   }
   .companies .companies__container .companies__content p {
     margin: 2.5rem 0 2rem 0;
+  }
+}
+
+.code .code__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.code .code__container img {
+  width: 100%;
+  margin-left: 2rem;
+}
+.code .code__container .code__content {
+  text-align: center;
+  color: var(--bg-blue-100);
+}
+.code .code__container .code__content h2 {
+  color: var(--text2);
+  font-size: 2.25rem;
+}
+.code .code__container .code__content p {
+  margin-inline: auto;
+  line-height: 28px;
+  max-width: 37ch;
+}
+@media (min-width: 768px) {
+  .code .code__container img {
+    margin-left: 4rem;
+  }
+  .code .code__container .code__content h2 {
+    font-size: 3rem;
+    margin-top: 0;
+  }
+  .code .code__container .code__content p {
+    max-width: 63ch;
+  }
+}
+@media (min-width: 1440px) {
+  .code .code__container {
+    flex-direction: row;
+  }
+  .code .code__container img {
+    margin-left: 0;
+  }
+  .code .code__container .code__content {
+    text-align: left;
+  }
+  .code .code__container .code__content p {
+    max-width: 75ch;
   }
 }/*# sourceMappingURL=index.css.map */
