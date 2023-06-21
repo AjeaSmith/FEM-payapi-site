@@ -251,6 +251,7 @@
 			text-align: center;
 			color: var(--bg-blue-100);
 			h2 {
+				margin-top: 0;
 				color: var(--text2);
 				font-size: 2.25rem;
 			}
@@ -291,6 +292,31 @@
 				p {
 					max-width: 75ch;
 				}
+			}
+		}
+	}
+}
+
+.simpleUI {
+	margin: 5rem 0;
+	.simpleUI__container {
+		display: flex;
+		flex-direction: column;
+		img {
+			margin-left: 2rem;
+		}
+		.simpleUI__content {
+			text-align: center;
+
+			h2 {
+				color: var(--text2);
+				font-size: 2.25rem;
+			}
+			p {
+				color: var(--bg-blue-100);
+				margin-inline: auto;
+				line-height: 28px;
+				max-width: 37ch;
 			}
 		}
 	}

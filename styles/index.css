@@ -390,6 +390,7 @@ header .sr-only:not(:focus):not(:active) {
   color: var(--bg-blue-100);
 }
 .code .code__container .code__content h2 {
+  margin-top: 0;
   color: var(--text2);
   font-size: 2.25rem;
 }
@@ -423,4 +424,28 @@ header .sr-only:not(:focus):not(:active) {
   .code .code__container .code__content p {
     max-width: 75ch;
   }
+}
+
+.simpleUI {
+  margin: 5rem 0;
+}
+.simpleUI .simpleUI__container {
+  display: flex;
+  flex-direction: column;
+}
+.simpleUI .simpleUI__container img {
+  margin-left: 2rem;
+}
+.simpleUI .simpleUI__container .simpleUI__content {
+  text-align: center;
+}
+.simpleUI .simpleUI__container .simpleUI__content h2 {
+  color: var(--text2);
+  font-size: 2.25rem;
+}
+.simpleUI .simpleUI__container .simpleUI__content p {
+  color: var(--bg-blue-100);
+  margin-inline: auto;
+  line-height: 28px;
+  max-width: 37ch;
 }/*# sourceMappingURL=index.css.map */
