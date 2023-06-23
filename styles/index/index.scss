@@ -297,6 +297,7 @@
 	}
 }
 
+// ---------- SIMPLE UI ------------------
 .simpleUI {
 	margin: 5rem 0;
 	.simpleUI__container {
@@ -317,6 +318,67 @@
 				margin-inline: auto;
 				line-height: 28px;
 				max-width: 37ch;
+			}
+		}
+	}
+	@media (min-width: 768px) {
+		.simpleUI__container {
+			.simpleUI__content {
+				h2 {
+					color: var(--text2);
+					font-size: 3rem;
+				}
+				p {
+					max-width: 61ch;
+				}
+			}
+		}
+	}
+	@media (min-width: 1440px) {
+		.simpleUI__container {
+			flex-direction: row;
+			align-items: center;
+			img {
+				margin-left: 0;
+				order: 1;
+			}
+			.simpleUI__content {
+				margin-left: 2rem;
+				text-align: left;
+				h2 {
+					color: var(--text2);
+					font-size: 3rem;
+				}
+				p {
+					max-width: 61ch;
+				}
+			}
+		}
+	}
+}
+
+// ---------- SERVICES ------------------
+
+.services {
+	.services__container {
+		display: grid;
+		grid-template-rows: repeat(3, 1fr);
+		row-gap: 3rem;
+		place-items: end;
+
+		.service__item {
+			text-align: center;
+			margin-inline: auto;
+			.service__title {
+				font-family: "Public Sans", sans-serif;
+				margin-bottom: 1rem;
+				color: var(--text2);
+				font-size: 1.125rem;
+				font-weight: bold;
+			}
+			p {
+				color: var(--bg-blue-100);
+				max-width: 36ch;
 			}
 		}
 	}

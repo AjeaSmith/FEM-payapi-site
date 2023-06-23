@@ -448,4 +448,56 @@ header .sr-only:not(:focus):not(:active) {
   margin-inline: auto;
   line-height: 28px;
   max-width: 37ch;
+}
+@media (min-width: 768px) {
+  .simpleUI .simpleUI__container .simpleUI__content h2 {
+    color: var(--text2);
+    font-size: 3rem;
+  }
+  .simpleUI .simpleUI__container .simpleUI__content p {
+    max-width: 61ch;
+  }
+}
+@media (min-width: 1440px) {
+  .simpleUI .simpleUI__container {
+    flex-direction: row;
+    align-items: center;
+  }
+  .simpleUI .simpleUI__container img {
+    margin-left: 0;
+    order: 1;
+  }
+  .simpleUI .simpleUI__container .simpleUI__content {
+    margin-left: 2rem;
+    text-align: left;
+  }
+  .simpleUI .simpleUI__container .simpleUI__content h2 {
+    color: var(--text2);
+    font-size: 3rem;
+  }
+  .simpleUI .simpleUI__container .simpleUI__content p {
+    max-width: 61ch;
+  }
+}
+
+.services .services__container {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 3rem;
+  place-items: end;
+}
+.services .services__container .service__item {
+  text-align: center;
+  margin-inline: auto;
+}
+.services .services__container .service__item .service__title {
+  font-family: "Public Sans", sans-serif;
+  margin-bottom: 1rem;
+  color: var(--text2);
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+.services .services__container .service__item p {
+  color: var(--bg-blue-100);
+  max-width: 36ch;
 }/*# sourceMappingURL=index.css.map */
