@@ -19,7 +19,10 @@
 }
 
 html {
-  font-size: 100%;
+  box-sizing: border-box;
+  font-size: var(--fs-body);
+  line-height: 28px;
+  font-family: "Public Sans", sans-serif;
 }
 
 *,
@@ -33,18 +36,6 @@ h2,
 h3,
 h4 {
   font-family: "DM Serif Display", serif;
-}
-
-body {
-  box-sizing: border-box;
-  margin: 0;
-  background-color: var(--bg-body);
-  background-image: url("../assets/shared/desktop/bg-pattern-circle.svg");
-  background-repeat: no-repeat;
-  background-position: center -500px;
-  font-size: var(--fs-body);
-  line-height: 28px;
-  font-family: "Public Sans", sans-serif;
 }
 
 .wrapper {
