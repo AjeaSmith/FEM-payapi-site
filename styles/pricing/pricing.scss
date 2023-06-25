@@ -1,6 +1,7 @@
 @import "../root.scss";
 @import "../header/header.scss";
 @import "../footer/footer";
+@import "../CTA/cta.scss";
 
 body {
 	box-sizing: border-box;
@@ -29,46 +30,63 @@ body {
 		}
 
 		.pricing__items {
-			.pricing__title {
-				font-weight: 400;
-				color: var(--bg-pink-200);
-				margin-bottom: 5.063rem;
-			}
-
-			.pricing__content {
-				display: none;
-			}
-
-			.pricing__price {
-				color: var(--text2);
-				font-size: clamp(
-					3rem,
-					3.676056338028169rem + -0.7511737089201878vw,
-					3.5rem
-				);
-			}
-
-			ul {
-				list-style: none;
-				text-align: left;
-				padding: 0 8.6rem;
-
-				li:not(.checked) {
-					color: var(--text2);
-					opacity: 0.5;
-					margin-left: 36px;
+			.pricing__item {
+				.pricing__title {
+					font-weight: 400;
+					color: var(--bg-pink-200);
+					margin-bottom: 5.063rem;
 				}
-				.checked {
+
+				.pricing__content {
+					display: none;
+				}
+
+				.pricing__price {
 					color: var(--text2);
-					&::before {
-						content: "";
-						display: inline-block;
-						margin-right: 24px;
-						width: 12px;
-						height: 8px;
-						background-image: url("../../assets/shared/desktop/icon-check.svg");
-						background-size: cover;
+					font-size: clamp(
+						3rem,
+						3.676056338028169rem + -0.7511737089201878vw,
+						3.5rem
+					);
+				}
+
+				ul {
+					list-style: none;
+					text-align: left;
+					padding: 0 8.6rem;
+
+					li:not(.checked) {
+						color: var(--text2);
+						opacity: 0.5;
+						margin-left: 36px;
 					}
+					.checked {
+						color: var(--text2);
+						&::before {
+							content: "";
+							display: inline-block;
+							margin-right: 24px;
+							width: 12px;
+							height: 8px;
+							background-image: url("../../assets/shared/desktop/icon-check.svg");
+							background-size: cover;
+						}
+					}
+				}
+
+				button {
+					font-weight: bold;
+					margin-top: 24px;
+					background-color: transparent;
+					border-radius: 50px;
+					font-size: 15px;
+					padding: 16px 28px;
+					border: 1px solid var(--text2);
+					color: var(--text2);
+				}
+
+				&:nth-child(2) {
+					margin: 3rem 0;
 				}
 			}
 		}
