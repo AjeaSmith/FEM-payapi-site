@@ -358,6 +358,51 @@ body {
   background-image: url("../assets/shared/desktop/bg-pattern-circle.svg");
   background-repeat: no-repeat;
   background-position-x: 250px;
-  background-position-y: -350px;
+  background-position-y: -320px;
   background-size: 100%;
+  font-size: 16px;
+}
+
+.pricing .pricing__container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.pricing .pricing__container h1 {
+  color: var(--text2);
+  font-size: clamp(2rem, 1.4718309859rem + 2.2535211268vw, 3.5rem);
+}
+.pricing .pricing__container .pricing__items .pricing__title {
+  font-weight: 400;
+  color: var(--bg-pink-200);
+  margin-bottom: 5.063rem;
+}
+.pricing .pricing__container .pricing__items .pricing__content {
+  display: none;
+}
+.pricing .pricing__container .pricing__items .pricing__price {
+  color: var(--text2);
+  font-size: clamp(3rem, 3.676056338rem - 0.7511737089vw, 3.5rem);
+}
+.pricing .pricing__container .pricing__items ul {
+  list-style: none;
+  text-align: left;
+  padding: 0 8.6rem;
+}
+.pricing .pricing__container .pricing__items ul li:not(.checked) {
+  color: var(--text2);
+  opacity: 0.5;
+  margin-left: 36px;
+}
+.pricing .pricing__container .pricing__items ul .checked {
+  color: var(--text2);
+}
+.pricing .pricing__container .pricing__items ul .checked::before {
+  content: "";
+  display: inline-block;
+  margin-right: 24px;
+  width: 12px;
+  height: 8px;
+  background-image: url("../../assets/shared/desktop/icon-check.svg");
+  background-size: cover;
 }/*# sourceMappingURL=pricing.css.map */
