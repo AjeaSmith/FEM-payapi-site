@@ -447,4 +447,9 @@ footer .footer__container .footer__social img:nth-child(2) {
   .CTA .CTA__container form .input-group input {
     margin-bottom: 0;
   }
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }/*# sourceMappingURL=about.css.map */
