@@ -17,7 +17,6 @@
   --fs-25: 1.6rem;
   --fs-24: 1.5rem;
   --fs-20: 1.25rem;
-  --container: 69.375rem;
 }
 
 html {
@@ -41,8 +40,8 @@ h4 {
 }
 
 .wrapper {
-  width: calc(100% - 3rem);
-  max-width: var(--container);
+  max-width: 375px;
+  padding: 0 24px;
   margin-inline: auto;
 }
 
@@ -52,10 +51,14 @@ h4 {
     background-position: center -700px;
   }
   .wrapper {
-    width: calc(100% - 4.87rem);
+    max-width: 768px;
   }
 }
 @media (min-width: 1440px) {
+  .wrapper {
+    max-width: 1440px;
+    padding: 0 165px;
+  }
   body {
     background-size: 900px 900px;
     background-position: 890px -237px;
@@ -77,7 +80,6 @@ h4 {
   --fs-25: 1.6rem;
   --fs-24: 1.5rem;
   --fs-20: 1.25rem;
-  --container: 69.375rem;
 }
 
 html {
@@ -101,8 +103,8 @@ h4 {
 }
 
 .wrapper {
-  width: calc(100% - 3rem);
-  max-width: var(--container);
+  max-width: 375px;
+  padding: 0 24px;
   margin-inline: auto;
 }
 
@@ -112,10 +114,14 @@ h4 {
     background-position: center -700px;
   }
   .wrapper {
-    width: calc(100% - 4.87rem);
+    max-width: 768px;
   }
 }
 @media (min-width: 1440px) {
+  .wrapper {
+    max-width: 1440px;
+    padding: 0 165px;
+  }
   body {
     background-size: 900px 900px;
     background-position: 890px -237px;
@@ -212,7 +218,7 @@ header .wrapper .sr-only:not(:focus):not(:active) {
     margin-left: 2.5rem;
   }
   header .wrapper nav ul li a {
-    font-size: var(--fs-20);
+    font-size: 15px;
     font-weight: bold;
     color: var(--text2);
     text-decoration: none;
@@ -248,7 +254,6 @@ header .wrapper .sr-only:not(:focus):not(:active) {
   --fs-25: 1.6rem;
   --fs-24: 1.5rem;
   --fs-20: 1.25rem;
-  --container: 69.375rem;
 }
 
 html {
@@ -272,8 +277,8 @@ h4 {
 }
 
 .wrapper {
-  width: calc(100% - 3rem);
-  max-width: var(--container);
+  max-width: 375px;
+  padding: 0 24px;
   margin-inline: auto;
 }
 
@@ -283,10 +288,14 @@ h4 {
     background-position: center -700px;
   }
   .wrapper {
-    width: calc(100% - 4.87rem);
+    max-width: 768px;
   }
 }
 @media (min-width: 1440px) {
+  .wrapper {
+    max-width: 1440px;
+    padding: 0 165px;
+  }
   body {
     background-size: 900px 900px;
     background-position: 890px -237px;
@@ -449,12 +458,18 @@ body {
   background-position-x: 250px;
   background-position-y: -320px;
   background-size: 100%;
-  font-size: 16px;
 }
 @media (min-width: 768px) {
   body {
     background-position-x: 575px;
     background-position-y: -600px;
+  }
+}
+@media (min-width: 1440px) {
+  body {
+    background-position-x: 800px;
+    background-position-y: -1000px;
+    background-size: contain;
   }
 }
 
@@ -471,6 +486,7 @@ body {
   font-weight: 400;
   color: var(--bg-pink-200);
   margin-bottom: 5.063rem;
+  font-size: clamp(1.5rem, 1.323943662rem + 0.7511737089vw, 2rem);
 }
 .pricing .pricing__container .pricing__items .pricing__item .pricing__content {
   display: none;
@@ -537,5 +553,25 @@ body {
     color: var(--bg-blue-100);
     max-width: 24ch;
     display: block;
+  }
+}
+@media (min-width: 1440px) {
+  .pricing .pricing__container {
+    text-align: left;
+  }
+  .pricing .pricing__container h1 {
+    margin-bottom: 4.5rem;
+  }
+  .pricing .pricing__container .pricing__items {
+    justify-content: space-between;
+  }
+  .pricing .pricing__container .pricing__items .pricing__item:nth-child(2) {
+    margin: 0 1.875rem;
+  }
+  .pricing .pricing__container .pricing__items .pricing__item ul {
+    max-width: none;
+  }
+  .pricing .pricing__container .pricing__items .pricing__item .pricing__content {
+    max-width: 40ch;
   }
 }/*# sourceMappingURL=pricing.css.map */

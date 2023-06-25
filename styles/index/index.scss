@@ -1,4 +1,4 @@
-@import "../header/header";
+@import "../components/header/header";
 @import "../components/footer/footer.scss";
 @import "../components/CTA/cta.scss";
 
@@ -9,6 +9,13 @@ body {
 	background-image: url("../assets/shared/desktop/bg-pattern-circle.svg");
 	background-repeat: no-repeat;
 	background-position: center -500px;
+
+	@media (min-width: 768px) {
+		background-position: center -680px;
+	}
+	@media (min-width: 1440px) {
+		background-position: 900px -280px;
+	}
 }
 
 // ---------- HERO SECTION ----------

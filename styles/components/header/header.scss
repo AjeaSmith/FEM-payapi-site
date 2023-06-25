@@ -86,6 +86,7 @@ header {
 			nav {
 				display: flex;
 				justify-content: space-between;
+
 				ul {
 					display: flex;
 					flex-direction: row;
@@ -98,7 +99,7 @@ header {
 					li {
 						margin-left: 2.5rem;
 						a {
-							font-size: var(--fs-20);
+							font-size: 15px;
 							font-weight: bold;
 							color: var(--text2);
 							text-decoration: none;

@@ -15,7 +15,6 @@
   --fs-25: 1.6rem;
   --fs-24: 1.5rem;
   --fs-20: 1.25rem;
-  --container: 69.375rem;
 }
 
 html {
@@ -39,8 +38,8 @@ h4 {
 }
 
 .wrapper {
-  width: calc(100% - 3rem);
-  max-width: var(--container);
+  max-width: 375px;
+  padding: 0 24px;
   margin-inline: auto;
 }
 
@@ -50,10 +49,14 @@ h4 {
     background-position: center -700px;
   }
   .wrapper {
-    width: calc(100% - 4.87rem);
+    max-width: 768px;
   }
 }
 @media (min-width: 1440px) {
+  .wrapper {
+    max-width: 1440px;
+    padding: 0 165px;
+  }
   body {
     background-size: 900px 900px;
     background-position: 890px -237px;
@@ -150,7 +153,7 @@ header .wrapper .sr-only:not(:focus):not(:active) {
     margin-left: 2.5rem;
   }
   header .wrapper nav ul li a {
-    font-size: var(--fs-20);
+    font-size: 15px;
     font-weight: bold;
     color: var(--text2);
     text-decoration: none;
