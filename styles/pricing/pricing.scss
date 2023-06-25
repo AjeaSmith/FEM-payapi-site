@@ -156,6 +156,12 @@ body {
 					.pricing__content {
 						max-width: 40ch;
 					}
+
+					button:hover {
+						cursor: pointer;
+						background-color: var(--bg-blue-200);
+						color: var(--text1);
+					}
 				}
 			}
 		}

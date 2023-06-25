@@ -574,4 +574,9 @@ body {
   .pricing .pricing__container .pricing__items .pricing__item .pricing__content {
     max-width: 40ch;
   }
+  .pricing .pricing__container .pricing__items .pricing__item button:hover {
+    cursor: pointer;
+    background-color: var(--bg-blue-200);
+    color: var(--text1);
+  }
 }/*# sourceMappingURL=pricing.css.map */
