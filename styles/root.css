@@ -18,10 +18,15 @@
 }
 
 html {
-  box-sizing: border-box;
   font-size: var(--fs-body);
   line-height: 28px;
   font-family: "Public Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-body);
 }
 
 *,

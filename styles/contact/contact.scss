@@ -1,5 +1,15 @@
-@import "../header/header";
 @import "../root.scss";
+@import "../components/header/header";
+@import "../components/CTA/cta";
+@import "../components/footer/footer";
 body {
-    background-color: pink;
+}
+
+.checkbox-container {
+	display: flex;
+	align-items: center;
+}
+
+.checkbox-container label {
+	margin-left: 10px;
 }

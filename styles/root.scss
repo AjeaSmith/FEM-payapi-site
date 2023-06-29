@@ -21,10 +21,14 @@
 }
 
 html {
-	box-sizing: border-box;
 	font-size: var(--fs-body);
 	line-height: 28px;
 	font-family: "Public Sans", sans-serif;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background-color: var(--bg-body);
 }
 
 *,
@@ -32,13 +36,13 @@ html {
 *::after {
 	box-sizing: inherit;
 }
+
 h1,
 h2,
 h3,
 h4 {
 	font-family: "DM Serif Display", serif;
 }
-
 .wrapper {
 	max-width: 400px;
 	padding: 0 16px;
