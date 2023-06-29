@@ -2,14 +2,142 @@
 @import "../components/header/header";
 @import "../components/CTA/cta";
 @import "../components/footer/footer";
+
 body {
+	background-image: url("../assets/shared/desktop/bg-pattern-circle.svg");
+	background-repeat: no-repeat;
+	background-position: 100px -658px;
+
+	@media (min-width: 768px) {
+		background-position: 400px -813px;
+	}
+	@media (min-width: 1440px) {
+		background-position: 990px -600px;
+	}
 }
 
-.checkbox-container {
-	display: flex;
-	align-items: center;
-}
+.contact {
+	.contact__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		.contact__form {
+			margin-bottom: 80px;
+			.contact__form--title {
+				margin-inline: auto;
+				text-align: center;
+				max-width: 20ch;
+				line-height: 36px;
+				font-size: clamp(
+					2rem,
+					1.471830985915493rem + 2.253521126760563vw,
+					3.5rem
+				);
+				color: var(--text2);
+			}
 
-.checkbox-container label {
-	margin-left: 10px;
+			form {
+				display: flex;
+				flex-direction: column;
+
+				input,
+				textarea {
+					padding: 15px;
+					margin-bottom: 24px;
+					border: none;
+					border-bottom: 1px solid #979797;
+					background: transparent;
+
+					&::placeholder {
+						font-size: 15px;
+					}
+				}
+				.checkbox-container {
+					display: flex;
+					align-items: center;
+					margin-bottom: 24px;
+					label {
+						margin-left: 10px;
+						max-width: 30ch;
+						letter-spacing: -0.12px;
+						line-height: 25px;
+						color: var(--text2);
+					}
+				}
+
+				button {
+					font-size: 15px;
+					font-weight: bold;
+					max-width: 152px;
+					border-radius: 50px;
+					border: 1px solid var(--text2);
+					outline: none;
+					background-color: transparent;
+					padding: 16px;
+
+					&:hover {
+						cursor: pointer;
+						background: var(--text2);
+						color: var(--text1);
+					}
+				}
+			}
+		}
+
+		.contact__investors {
+			margin-bottom: 20px;
+			h2 {
+				margin-inline: auto;
+				max-width: 25ch;
+				font-size: 24px;
+				text-align: center;
+				color: var(--text2);
+				opacity: 0.7;
+				margin-bottom: 32px;
+			}
+
+			.contact__investors--images {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				justify-items: center;
+				align-items: center;
+				row-gap: 44px;
+			}
+		}
+	}
+
+	@media (min-width: 768px) {
+		.contact__container {
+			align-items: center;
+			.contact__form {
+				.contact__form--title {
+					line-height: 56px;
+				}
+
+				form {
+					.checkbox-container {
+						label {
+							max-width: 40ch;
+						}
+					}
+				}
+			}
+			.contact__investors {
+				h2 {
+					max-width: 40ch;
+					margin-bottom: 40px;
+				}
+				.contact__investors--images {
+					grid-template-columns: repeat(3, 1fr);
+					column-gap: 62px;
+				}
+			}
+		}
+	}
+
+	@media (min-width: 1440px) {
+		.contact__container {
+			flex-direction: row;
+		}
+	}
 }
