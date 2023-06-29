@@ -99,6 +99,10 @@ body {
 
 			.about__details {
 				text-align: left;
+
+				.about__details--title {
+					margin-top: 0;
+				}
 				.about__details--wrap {
 					display: grid;
 					grid-template-columns: 230px 1fr;
@@ -112,7 +116,7 @@ body {
 
 			.metric {
 				border-top: 1px solid rgb(151, 151, 151, 0.5);
-                border-bottom: 1px solid rgb(151, 151, 151, 0.5);
+				border-bottom: 1px solid rgb(151, 151, 151, 0.5);
 
 				h2 {
 					margin-top: 0.83em;
@@ -124,6 +128,40 @@ body {
 			&::before,
 			&::after {
 				content: none;
+			}
+		}
+	}
+
+	@media (min-width: 1440px) {
+		background-image: url("../../assets/shared/desktop/bg-pattern-circle.svg");
+		background-repeat: no-repeat;
+		background-size: 50%;
+        background-position-y: 410px;
+		background-position-x: -500px;
+		.about__container {
+			max-width: 920px;
+			margin-inline: auto;
+
+			.about__title {
+				line-height: 56px;
+				text-align: left;
+				max-width: 24ch;
+				margin-inline: 0;
+				margin-bottom: 70px;
+			}
+			.about__details--wrap {
+				.about__details--content {
+					margin: 0;
+				}
+			}
+			.about__details--wrap:nth-child(1) {
+				margin-bottom: 56px;
+			}
+		}
+		.about__hero {
+			img {
+				width: 100%;
+				max-width: 100%;
 			}
 		}
 	}
