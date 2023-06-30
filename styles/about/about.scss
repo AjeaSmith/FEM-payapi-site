@@ -7,6 +7,17 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: var(--bg-body);
+
+	background-image: url("../assets/shared/desktop/bg-pattern-circle.svg");
+	background-repeat: no-repeat;
+	background-position: 100px -658px;
+
+	@media (min-width: 768px) {
+		background-position: 400px -813px;
+	}
+	@media (min-width: 1440px) {
+		background-position: 990px -600px;
+	}
 }
 
 .about {
@@ -136,7 +147,7 @@ body {
 		background-image: url("../../assets/shared/desktop/bg-pattern-circle.svg");
 		background-repeat: no-repeat;
 		background-size: 50%;
-        background-position-y: 410px;
+		background-position-y: 410px;
 		background-position-x: -500px;
 		.about__container {
 			max-width: 920px;
