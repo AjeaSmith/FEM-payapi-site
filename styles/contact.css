@@ -62,7 +62,7 @@ h4 {
 }
 @media (min-width: 1440px) {
   .wrapper {
-    max-width: 1440px;
+    max-width: 1400px;
     padding: 0 165px;
   }
   body {
@@ -131,7 +131,7 @@ h4 {
 }
 @media (min-width: 1440px) {
   .wrapper {
-    max-width: 1440px;
+    max-width: 1400px;
     padding: 0 165px;
   }
   body {
@@ -400,7 +400,7 @@ h4 {
 }
 @media (min-width: 1440px) {
   .wrapper {
-    max-width: 1440px;
+    max-width: 1400px;
     padding: 0 165px;
   }
   body {
@@ -587,5 +587,17 @@ body {
 @media (min-width: 1440px) {
   .contact .contact__container {
     flex-direction: row;
+    gap: 124px;
+    justify-content: space-between;
+  }
+  .contact .contact__container .contact__form {
+    margin-bottom: 69px;
+  }
+  .contact .contact__container .contact__form .contact__form--title {
+    max-width: 28ch;
+    text-align: left;
+  }
+  .contact .contact__container .contact__investors h2 {
+    text-align: left;
   }
 }/*# sourceMappingURL=contact.css.map */

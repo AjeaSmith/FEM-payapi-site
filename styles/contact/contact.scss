@@ -138,6 +138,20 @@ body {
 	@media (min-width: 1440px) {
 		.contact__container {
 			flex-direction: row;
+			gap: 124px;
+			justify-content: space-between;
+			.contact__form {
+				margin-bottom: 69px;
+				.contact__form--title {
+					max-width: 28ch;
+					text-align: left;
+				}
+			}
+			.contact__investors {
+				h2 {
+					text-align: left;
+				}
+			}
 		}
 	}
 }
